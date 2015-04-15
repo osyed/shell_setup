@@ -1,0 +1,32 @@
+
+# Add the following to your ~/.bashrc file and uncomment
+#if [ -f $HOME/.bashrc_mine ]; then
+#        . $HOME/.bashrc_mine
+#fi
+
+# setup the shell prompt
+export PS1='\u@\h:\W\$ '
+
+lsl(){
+  ls -alt "$@" | more
+}
+
+mark(){
+  /bin/pwd > "$HOME/.markgo/$1"
+}
+
+go(){
+  /bin/pwd > "$HOME/.markgo/.back"
+  cd `/bin/cat $HOME/.markgo/$1`
+  /bin/mv "$HOME/.markgo/.back" "$HOME/.markgo/back"
+}
+
+unmark(){
+  /bin/rm -f "$HOME/.markgo/$1"
+}
+
+showmark(){
+  (cd "$HOME/.markgo"; /bin/grep "." *)
+}
+
+
