@@ -18,6 +18,7 @@ mark(){
 go(){
   /bin/pwd > "$HOME/.markgo/.back"
   cd "`/bin/cat $HOME/.markgo/$1`"
+  echo `/bin/cat $HOME/.markgo/$1`
   /bin/mv "$HOME/.markgo/.back" "$HOME/.markgo/back"
 }
 
