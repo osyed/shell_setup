@@ -5,7 +5,7 @@
 #fi
 
 # setup the shell prompt
-export PS1='\u@\H:\s[\!]\$ '
+export PS1='\u@\H:\w[\!]\$ '
 
 # don't save commands lines that start with space in the history file
 # export HISTCONTROL=ignorespace
