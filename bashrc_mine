@@ -35,4 +35,6 @@ showmark(){
 
 mkdir -p "$HOME/.markgo"
 
+PATH=".:./bin:$HOME/bin:$PATH"
+
 
