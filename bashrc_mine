@@ -33,4 +33,6 @@ showmark(){
   (cd "$HOME/.markgo"; /bin/grep "." *)
 }
 
+mkdir -p "$HOME/.markgo"
+
 
